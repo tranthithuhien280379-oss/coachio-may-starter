@@ -3,6 +3,10 @@
 .env
 .openclaw/credentials/
 .openclaw/agents/*/agent/auth-profiles.json
+.openclaw/agents/
+.openclaw/state/
+.openclaw/openclaw.json.bak*
+.openclaw/openclaw.json.last-good
 
 # ===== DỮ LIỆU CHẠY (Mây tự sinh — không cần version) =====
 .openclaw/openclaw-runtime.json
@@ -14,6 +18,16 @@
 .openclaw/sessions/
 .openclaw/media/
 .openclaw/tmp/
+.openclaw/npm/
+.openclaw/identity/
+.openclaw/telegram/
+.openclaw/completions/
+.openclaw/skill-workshop/
+.openclaw/plugin-skills/
+.openclaw/workspace-attestations/
+.openclaw/workspace/openclaw-workspace-state.json
+.openclaw/workspace/HEARTBEAT.md
+.openclaw/workspace/TOOLS.md
 
 # ===== Rác =====
 **/__pycache__/

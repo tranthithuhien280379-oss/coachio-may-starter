@@ -18,7 +18,8 @@
       "enabled": true,
       "reactionLevel": "minimal",
       "dmPolicy": "allowlist",
-      "allowFrom": ["DAN_TELEGRAM_ID_CUA_BAN_VAO_DAY"]
+      "allowFrom": ["DAN_TELEGRAM_ID_CUA_BAN_VAO_DAY"],
+      "network": { "autoSelectFamily": false }
     }
   },
   "commands": { "ownerAllowFrom": ["telegram:DAN_TELEGRAM_ID_CUA_BAN_VAO_DAY"] },
