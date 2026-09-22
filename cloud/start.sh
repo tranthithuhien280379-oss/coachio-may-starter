@@ -32,8 +32,6 @@ if [ -n "${OWNER_TELEGRAM_ID}" ]; then
   node -e 'const fs=require("fs"),f=process.argv[1],id=process.argv[2];const c=JSON.parse(fs.readFileSync(f,"utf8"));c.channels=c.channels||{};c.channels.telegram=c.channels.telegram||{};c.channels.telegram.dmPolicy="allowlist";c.channels.telegram.allowFrom=[String(id)];c.commands=c.commands||{};c.commands.ownerAllowFrom=["telegram:"+id];fs.writeFileSync(f,JSON.stringify(c,null,2))' "$H/openclaw.json" "${OWNER_TELEGRAM_ID}"
   echo "[start] owner đồng bộ từ Variable: ${OWNER_TELEGRAM_ID}"
 fi
-# 2b) Whitelist nhóm chung VMM70 (giữ mỗi lần deploy)
-node -e 'const fs=require("fs"),f=process.argv[1];const c=JSON.parse(fs.readFileSync(f,"utf8"));c.channels=c.channels||{};c.channels.telegram=c.channels.telegram||{};c.channels.telegram.groups=c.channels.telegram.groups||{};c.channels.telegram.groups["-5523520763"]={enabled:true,requireMention:true};fs.writeFileSync(f,JSON.stringify(c,null,2))' "$H/openclaw.json"
 
 # 3) .env (state-dir, trusted) — ghi mỗi lần chạy → đổi Variables trên Railway là cập nhật
 {
